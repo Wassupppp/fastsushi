@@ -96,7 +96,7 @@ namespace fastsushi
                         {
                             MessageBox.Show("Connexion réussie !");
                             // Vérifier le rôle.
-                            if (role == "admin")
+                            if (role == "[\"admin\"]")
                             {
                                 //Ajoutez ici le code pour afficher votre formulaire principale
                                 this.Hide();
@@ -106,7 +106,7 @@ namespace fastsushi
                                 w = null;
                                 this.Show();
                             }
-                            else if (role == "Preparateur")
+                            else if (role == "[\"Preparateur\"]")
                             {
                                 //Ajoutez ici le code pour afficher votre formulaire principale
                                 this.Hide();
@@ -115,6 +115,10 @@ namespace fastsushi
                                 w.ShowDialog(); // Bloquant jusqu'a la fermeture du form
                                 w = null;
                                 this.Show();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Pas accés . Veuillez réessayer.");
                             }
 
                         }
